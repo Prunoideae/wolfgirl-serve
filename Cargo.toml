@@ -1,0 +1,28 @@
+[package]
+edition = "2021"
+name = "wolfgirl-serve"
+version = "0.1.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.66"
+chrono = "0.4.23"
+clap = {version = "4.0.29", features = ["derive"]}
+dashmap = {version = "5.4.0", features = ["serde"]}
+# hotwatch = "0.4.6"
+hyper = "0.14.23"
+ignore = "0.4.18"
+lazy_static = "1.4.0"
+notify = "5.0.0"
+path-clean = "0.1.0"
+rocket = {version = "0.5.0-rc.2", features = ["json"]}
+rocket_dyn_templates = {version = "0.1.0-rc.2", features = ["tera"]}
+serde = {version = "1.0.148", features = [
+  "derive",
+]}
+tera = "1.17.1"
+tokio = "1.22.0"
+
+[profile.release]
+lto = true
